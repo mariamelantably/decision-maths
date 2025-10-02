@@ -13,11 +13,17 @@ A collection of algorithms studied in Decision Maths A Level, from searching, so
 - Multiplication Algorithm
 - Quick Sort
 
-### To Be Added
+### Chapter 3
 - Prim's Algorithm for MST
 - Kruskal's Algorithm for MST
+
+### To Be Added
 - Nearest Neighbour Algorithm
 - Djikstra's Algorithm
+- Eulerian Graph Algorithms
+- Travelling Salesman Problem
+- Critical Path Analysis
+- Linear Programming
 
 ## Contact
 Email: mariamantably@gmail.com
