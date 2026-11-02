@@ -19,8 +19,11 @@ A collection of algorithms studied in Decision Maths A Level, from searching, so
 - Nearest Neighbour Algorithm
 - Djikstra's Algorithm
 
+### Chapter 4
+- Eulerian Graph Checker
+
 ### To Be Added
-- Eulerian Graph Algorithms
+- Route Inspection Algorithms
 - Travelling Salesman Problem
 - Critical Path Analysis
 - Linear Programming
