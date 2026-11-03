@@ -4,7 +4,7 @@ Graph representations are expected as vertices and adjacency list maps, indexed 
 '''
 
 # Recursive visiting function for DFS
-def visit(vertex: int, adj: map[int, list[int]], visited):
+def visit(vertex: int, adj: map[int, list[int]], visited) -> list[int]:
     visited += vertex
     for v in adj[vertex]:
         if v not in visited:
@@ -12,22 +12,22 @@ def visit(vertex: int, adj: map[int, list[int]], visited):
     return visited
 
 # Computes the visited vertices from arbitrary root using DFS and checks it is equal to the entire vertex set
-def is_connected(vertices: list[int], adj: map[int, list[int]]):
+def is_connected(vertices: list[int], adj: map[int, list[int]]) -> bool:
     if len(vertices) == 0: return False
     visited = visit(vertices[0], adj, {})
     return visited == vertices 
 
 # Counts the number of odd vertices in a graph
-def number_odd(vertices: list[int], adj: map[int, list[int]]):
+def number_odd(vertices: list[int], adj: map[int, list[int]]) -> int:
     odd_degree = 0
     for vertex in vertices:
         if len(adj[vertex]%2 != 0): odd_degree += 1
     return odd_degree
 
 # Checks if a graph is eulerian
-def is_eulerian(vertices: list[int], adj: map[int, list[int]]):
+def is_eulerian(vertices: list[int], adj: map[int, list[int]]) -> bool:
     return is_connected(vertices, adj) & (number_odd(vertices, adj) == 0)
 
 # Checks if a graph is semi-eulerian
-def is_semi_eulerian(vertices: list[int], adj: map[int, list[int]]):
+def is_semi_eulerian(vertices: list[int], adj: map[int, list[int]]) -> bool:
     return is_connected(vertices, adj) & (number_odd(vertices, adj) == 2)

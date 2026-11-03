@@ -21,9 +21,9 @@ A collection of algorithms studied in Decision Maths A Level, from searching, so
 
 ### Chapter 4
 - Eulerian Graph Checker
+- Route Inspection Algorithm
 
 ### To Be Added
-- Route Inspection Algorithms
 - Travelling Salesman Problem
 - Critical Path Analysis
 - Linear Programming
