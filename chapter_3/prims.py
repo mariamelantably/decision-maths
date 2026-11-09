@@ -6,6 +6,13 @@ class Graph:
     def add(self, vertex, edge):
         self.set[vertex] = insert(self.set[vertex], edge)
 
+    def get_weight(self):
+        sum_weights = 0
+        for list in self.set.values():
+            for edge in list:
+                sum_weights += edge[2]
+        return sum_weights
+
 #inserts l into an already sorted array of tuples, i.e. sorts edges by their weights 
 def insert(arr, l):
     i = len(arr)-1

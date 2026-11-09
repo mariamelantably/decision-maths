@@ -1,24 +1,15 @@
 from math import inf
 from numpy import argmin
+from collections import defaultdict
+from prims import Graph
 
-class Graph:
-    def __init__(self, vertices):
-        self.vertices = vertices
-        self.edges = []
-        self.adjacency = {}
-        self.weights = [[inf for _ in range(len(vertices))] for _ in range(len(vertices))] 
-    
-    def add(self, source, target, weight):
-        if (self.weights[source][target] != inf):
-            raise ValueError 
-        self.weights[source][target] = weight
-
-def nearest_neighbour(graph):
+def nearest_neighbour(graph : Graph, source):
     visited = []
-    v = graph.vertices[0]
-    w2 = graph.weights.copy()
+    v = source
+    vertices = graph.set.keys()
+    w2 = defaultdict(defaultdict(int))
     visited.append(v)
-    for i in range(len(w2[0])):
+    for i in vertices:
         w2[i][v] = inf 
     while (visited != graph.vertices[0]):
         curr = min(w2[v])
@@ -28,7 +19,7 @@ def nearest_neighbour(graph):
             for i in range(len(w2[0])):
                 w2[i][v] = inf 
         else:
-            break
+            x
     return visited
 
 newGraph = Graph([0, 1, 2, 3, 4])
